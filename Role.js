@@ -1,0 +1,23 @@
+/**
+ * Role.js
+ *
+ * @description :: TODO: You might write a short summary of how this model works and what it represents here.
+ * @docs        :: http://sailsjs.org/documentation/concepts/models-and-orm/models
+ */
+
+module.exports = {
+
+  attributes: {
+      'role_type':{
+          type: "string"
+      },
+      users:{
+          collection:"User",
+          through:"user-role",
+      },
+      services:{
+        collection:'Service',
+        through:"user-role",
+      }
+  }
+};
